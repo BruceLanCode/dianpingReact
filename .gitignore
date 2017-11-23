@@ -1,0 +1,8 @@
+### WebStorm ###
+.idea/
+
+# App specific
+
+node_modules/
+
+build/
