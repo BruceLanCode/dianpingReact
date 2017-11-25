@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=dev && webpack-dev-server",
-    "mock": "node --harmony ./mock/server.js"
+    "mock": "node ./mock/server.js"
   },
   "repository": {
     "type": "git",
