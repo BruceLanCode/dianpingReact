@@ -9,12 +9,16 @@ const app = new Koa();
 const router = new Router();
 
 const homeAdData = require('./home/ad');
-router.get('/api/homead',(cxt,next) => {
-    console.log('首页  -- 广告（超值特惠）')
+router.get('/api/homead',(cxt) => {
+  cxt.response.body = homeAdData;
+});
 
-    cxt.response.body = homeAdData;
-})
+const homeListData = require('./home/list');
+router.get('/api/homeList/:city/:page',(cxt) => {
+  cxt.response.body = homeListData;
+  console.log();
+});
 
-app.use(router.routes())
+app.use(router.routes());
 app.listen(3000);
 
