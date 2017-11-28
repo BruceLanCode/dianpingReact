@@ -1,9 +1,9 @@
 /**
  * Created by lantu on 2017/11/23.
  */
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var path = require('path');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname,'app/index.jsx'),
@@ -22,7 +22,25 @@ module.exports = {
         },{
             test: /\.css$/,
             exclude: /node_modules/,
-            loader: 'style-loader!css-loader'
+            use: [{
+                loader: 'style-loader'
+            },{
+                loader: 'css-loader'
+            },{
+                loader: 'postcss-loader'
+            }]
+        },{
+            test: /\.less$/,
+            exclude: /node_modules/,
+            use: [{
+                loader: 'style-loader'
+            },{
+                loader: 'css-loader'
+            },{
+                loader: 'postcss-loader'
+            },{
+                loader: 'less-loader'
+            }]
         },{
             test: /\.(png|gif|jpg|jpeg|bmp)$/i,
             loader: 'url-loader',
@@ -48,5 +66,13 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEV__: JSON.stringify(JSON.parse((process.env.NODE_ENV === 'dev') || 'false'))
         })
-    ]
-}
+    ],
+
+    devServer: {
+        proxy: {
+            'api': 'http://localhost:3000'
+        },
+        hot: true,
+        historyApiFallback: true
+    }
+};
