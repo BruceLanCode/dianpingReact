@@ -6,7 +6,8 @@
   "scripts": {
     "start": "set NODE_ENV=dev && webpack-dev-server",
     "mock": "node ./mock/server.js",
-    "eslintInit": "./node_modules/.bin/eslint --init"
+    "eslintInit": "./node_modules/.bin/eslint --init",
+    "eslint-fix": "eslint --fix"
   },
   "repository": {
     "type": "git",
