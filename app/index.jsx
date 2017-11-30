@@ -10,6 +10,8 @@ import './static/css/font.less';
 const store = configureStore();
 
 render(
-    <div>lantu!!!! <i className="icon-arrow-left"></i></div>,
+    <Provider store={store}>
+        <div>lantu!!!! <i className="icon-arrow-left"></i></div>
+    </Provider>,
     document.getElementById('root')
 );

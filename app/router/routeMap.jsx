@@ -5,7 +5,7 @@ class RouteMap extends Component {
     render(){
         return (
             <div>huangxi</div>
-        )
+        );
     }
 }
 
