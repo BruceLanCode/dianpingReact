@@ -11,7 +11,7 @@ const store = configureStore();
 
 render(
     <Provider store={store}>
-        <div>lantu!!!! <i className="icon-arrow-left"></i></div>
+        <RouteMap />
     </Provider>,
     document.getElementById('root')
 );
