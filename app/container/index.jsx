@@ -7,6 +7,7 @@ import Home from './Home';
 import * as userInfoActionsFromOtherFile from '../action/userInfo';
 import LocalStore from '../util/localStore';
 import { CITYNAME } from '../config/localStoreKey';
+import City from './City';
 
 class App extends PureComponent {
     constructor(){
@@ -31,7 +32,10 @@ class App extends PureComponent {
 
     render(){
         const children = (
-            <Route exec path="/" component={Home} />
+            <div>
+                <Route exact path="/" component={Home} />
+                <Route path="/city" component={City}/>
+            </div>
         );
         return (
             <div>
