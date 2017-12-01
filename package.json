@@ -24,11 +24,13 @@
   },
   "homepage": "https://github.com/lantuhui/dianpingReact#readme",
   "dependencies": {
-    "react": "^16.1.1",
+    "react": "^16.2.0",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2"
+    "react-swipe": "^5.1.0",
+    "redux": "^3.7.2",
+    "swipe-js-iso": "^2.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",

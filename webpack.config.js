@@ -6,6 +6,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    devtool: 'source-map',
     entry: path.resolve(__dirname,'app/index.jsx'),
     output: {
         path: __dirname + '/build',
@@ -70,7 +71,7 @@ module.exports = {
 
     devServer: {
         proxy: {
-            'api': 'http://localhost:3000'
+            '/api': 'http://localhost:3000'
         },
         hot: true,
         historyApiFallback: true
