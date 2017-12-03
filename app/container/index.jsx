@@ -8,6 +8,9 @@ import * as userInfoActionsFromOtherFile from '../action/userInfo';
 import LocalStore from '../util/localStore';
 import { CITYNAME } from '../config/localStoreKey';
 import City from './City';
+import NotFound from '../container/404';
+import Login from '../container/Login';
+import User from '../container/User';
 
 class App extends PureComponent {
     constructor(){
@@ -35,6 +38,9 @@ class App extends PureComponent {
             <div>
                 <Route exact path="/" component={Home} />
                 <Route path="/city" component={City}/>
+                <Route path="/login" component={Login}/>
+                <Route path="/User" component={User}/>
+                {/*<Route path="*" component={NotFound}/>*/}
             </div>
         );
         return (

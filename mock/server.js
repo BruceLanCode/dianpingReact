@@ -35,7 +35,7 @@ router.get('/api/detail/comment/:page/:id',(cxt) => {
 });
 
 const orderList = require('./orderList/orderList.js');
-router.get('/api/detail/orderList/:username',(cxt) => {
+router.get('/api/orderList/:username',(cxt) => {
     cxt.response.body = orderList;
 });
 
