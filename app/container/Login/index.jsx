@@ -8,11 +8,12 @@ import LoginComponent from '../../components/Login';
 import * as userInfoActionsFromOtherFile from '../../action/userInfo';
 
 class Login extends PureComponent {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             checking: true
         };
+        // console.log(props);
     }
 
     loginHandle(username) {

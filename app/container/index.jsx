@@ -38,7 +38,7 @@ class App extends PureComponent {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/city" component={City}/>
-                <Route path="/login" component={Login}/>
+                <Route path="/login/:router?" component={Login}/>
                 <Route path="/User" component={User}/>
                 <Route component={NotFound}/>
             </Switch>
