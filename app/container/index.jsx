@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -35,13 +35,13 @@ class App extends PureComponent {
 
     render(){
         const children = (
-            <div>
+            <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/city" component={City}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/User" component={User}/>
-                {/*<Route path="*" component={NotFound}/>*/}
-            </div>
+                <Route component={NotFound}/>
+            </Switch>
         );
         return (
             <div>
