@@ -41,8 +41,8 @@ class App extends PureComponent {
                 <Route path="/city" component={City}/>
                 <Route path="/login/:router?" component={Login}/>
                 <Route path="/User" component={User}/>
-                {/*<Route path="/search/:category/:keyword?" component={Search}/>*/}
-                <Route path="/search" component={Search}/>
+                <Route path="/search/:category/:keyword?" component={Search}/>
+                {/*<Route path="/search" component={Search}/>*/}
                 <Route component={NotFound}/>
             </Switch>
         );
