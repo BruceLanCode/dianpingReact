@@ -8,7 +8,7 @@ class ListItem extends PureComponent {
         const data = this.props.data;
         return (
             <div className="list-item clear-fix">
-                <Link to={`/detail/info/${data.id}`}>
+                <Link to={`/detail/${data.id}`}>
                     <div className="item-img-container float-left">
                         <img src={data.img} alt={data.title}/>
                     </div>

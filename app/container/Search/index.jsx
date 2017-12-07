@@ -10,7 +10,6 @@ class Search extends PureComponent {
             <div>
                 <SearchHeader keyword={params.keyword}/>
                 <SearchList keyword={params.keyword} category={params.category}/>
-                黄茜
             </div>
         );
     }

@@ -12,6 +12,7 @@ import NotFound from '../container/404';
 import Login from '../container/Login';
 import User from '../container/User';
 import Search from '../container/Search';
+import Detail from '../container/Detail';
 
 class App extends PureComponent {
     constructor(){
@@ -42,7 +43,7 @@ class App extends PureComponent {
                 <Route path="/login/:router?" component={Login}/>
                 <Route path="/User" component={User}/>
                 <Route path="/search/:category/:keyword?" component={Search}/>
-                {/*<Route path="/search" component={Search}/>*/}
+                <Route path="/detail" component={Detail}/>
                 <Route component={NotFound}/>
             </Switch>
         );
