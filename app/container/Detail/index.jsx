@@ -7,14 +7,13 @@ import Comment from './subpage/Comment';
 
 class Detail extends PureComponent {
     render() {
-        const id = 46874486835424567;
+        const id = this.props.match.params.id;
         return (
             <div>
                 <Header title="商户详情"/>
                 <Info id={id}/>
                 <Buy id={id}/>
                 <Comment id={id}/>
-                黄茜
             </div>
         );
     }
